@@ -1,5 +1,5 @@
 <p align="center">
-<a href="https://flarum.org/"><img src="https://flarum.org/images/flarum.svg"></a>
+<a href="https://flarum.org/"><img src="https://docs.flarum.org/img/logo-docs.svg"></a>
 </p>
 
 <p align="center">
@@ -18,7 +18,7 @@
 
 * **Powerful and extensible.** Customize, extend, and integrate Flarum to suit your community. Flarum’s architecture is amazingly flexible, with a powerful Extension API.
 
-![screenshot](https://flarum.org/assets/flarum/home-screenshot.png)
+![screenshot](https://flarum.org/assets/img/home-screenshot-new.png)
 
 ## Installation
 
