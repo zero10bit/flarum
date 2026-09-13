@@ -10,6 +10,10 @@
 ### Changed
 * `extend.php` declares `strict_types`
 
+### Security
+* Apache, nginx and IIS configs deny dotfiles under `public/` (nginx and IIS previously served `.htaccess` and `.gitignore`) and refuse to execute `.php`, `.phtml` or `.phar` files under `public/assets/`
+* `public/index.php` and the `flarum` CLI resolve `site.php` relative to their own directory instead of the include path
+
 ### Fixed
 * IIS `web.config` default document is `index.php` (was `Index.php`)
 * The "exposed resources" rule in `web.config` now actually matches: IIS passes the URL without a leading slash, so the previous `^/` anchor never fired
