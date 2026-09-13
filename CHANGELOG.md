@@ -1,5 +1,20 @@
 # Changelog
 
+## Unreleased
+
+### Added
+* Audit extension
+* Platform requirements in `composer.json`: PHP 8.3 and the extensions the install guide lists (`ext-curl`, `ext-dom`, `ext-fileinfo`, `ext-gd`, `ext-json`, `ext-mbstring`, `ext-openssl`, `ext-session`, `ext-tokenizer`, `ext-zip`)
+* `optimize-autoloader` enabled by default
+
+### Changed
+* `extend.php` declares `strict_types`
+
+### Fixed
+* IIS `web.config` default document is `index.php` (was `Index.php`)
+* The "exposed resources" rule in `web.config` now actually matches: IIS passes the URL without a leading slash, so the previous `^/` anchor never fired
+* The commented "exposed resources" rules in `.nginx.conf` and `web.config` no longer match unrelated paths that merely begin with `flarum`, `storage` or `vendor`
+
 ## [2.0.0-beta.3](https://github.com/flarum/flarum/compare/v2.0.0-beta.2...v2.0.0-beta.3)
 
 No changes.

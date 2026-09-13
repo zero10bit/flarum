@@ -17,10 +17,22 @@
     ],
     "support": {
         "issues": "https://github.com/flarum/core/issues",
+        "forum": "https://discuss.flarum.org/",
         "source": "https://github.com/flarum/flarum",
         "docs": "https://docs.flarum.org/"
     },
     "require": {
+        "php": "^8.3",
+        "ext-curl": "*",
+        "ext-dom": "*",
+        "ext-fileinfo": "*",
+        "ext-gd": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "ext-openssl": "*",
+        "ext-session": "*",
+        "ext-tokenizer": "*",
+        "ext-zip": "*",
         "flarum/core": "^2.0.0-rc.8",
         "flarum/audit": "*",
         "flarum/approval": "*",
@@ -44,7 +56,8 @@
     },
     "config": {
         "preferred-install": "dist",
-        "sort-packages": true
+        "sort-packages": true,
+        "optimize-autoloader": true
     },
     "minimum-stability": "beta",
     "prefer-stable": true
