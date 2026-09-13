@@ -16,10 +16,20 @@
   # RewriteRule ^vendor/(.*)?$ / [F,L]
   # <!-- END EXPOSED RESOURCES PROTECTION -->
 
+  # Never execute PHP from the assets directory (the only directory Flarum writes to)
+  RewriteRule ^assets/.*\.(php|phtml|phar)$ - [F,L]
+
   # Pass requests that don't refer directly to files in the filesystem to index.php
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^ index.php [QSA,L]
+</IfModule>
+
+# Deny access to dotfiles (.htaccess, .gitignore, ...)
+<IfModule mod_authz_core.c>
+  <FilesMatch "^\.">
+    Require all denied
+  </FilesMatch>
 </IfModule>
 
 # Disable directory listings
